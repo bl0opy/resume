@@ -86,7 +86,8 @@ const POPUP_DATA = {
   },
   mmbc: {
     title: "Michigan Music Business Club",
-    image: "images/mmbc.jpg",
+    image: "images/mmbc.webp",
+    logo: true,
     text: "Director of Creative Technology — bringing tech and production tools into the club's music industry programming.",
     links: []
   },
