@@ -13,8 +13,9 @@ function buildPanelContent(data) {
   const linksHtml = data.links && data.links.length
     ? `<div class="popup-links">${data.links.map(l => `<a href="${l.url}" target="_blank" rel="noopener">${l.label} ↗</a>`).join("")}</div>`
     : "";
+  const imgClass = data.logo ? "popup-image logo" : "popup-image";
   return `
-    <div class="popup-image">${imgHtml}</div>
+    <div class="${imgClass}">${imgHtml}</div>
     <h3>${data.title}</h3>
     <p>${data.text}</p>
     ${linksHtml}
