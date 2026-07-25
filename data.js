@@ -27,7 +27,7 @@ const POPUP_DATA = {
     logo: true,
     text: "Two summers building ML and audio systems for surgical robotics — from CORI Total-Knee time prediction to a real-time noise gating pipeline for the OR.",
     links: [
-      { label: "CORI Surgical System", url: "https://www.smith-nephew.com/en/health-care-professionals/products/robotics/cori-surgical-system" }
+      { label: "CORI Surgical System", url: "https://www.smith-nephew.com/en-us/health-care-professionals/products/orthopaedics/cori" }
     ]
   },
   emanate: {
@@ -36,7 +36,9 @@ const POPUP_DATA = {
     fit: true,
     text: "Music technology studio producing audio-reactive visuals for live concerts using DSP and computer vision — including a walkable projected piano installation.",
     links: [
-      { label: "emanate.studio", url: "https://www.emanate.studio/" }
+      { label: "emanate.studio", url: "https://www.emanate.studio/" },
+      { label: "Video Demo", url: "https://youtube.com/shorts/_eDrTClHqNM?feature=share" },
+      { label: "Code", url: "https://github.com/bl0opy/floor-piano" }
     ]
   },
   aoc: {
@@ -53,7 +55,7 @@ const POPUP_DATA = {
     logo: true,
     text: "Purdue research internship testing MEMS switches and prototyping an Enhanced 911 altimeter locator system. Paper peer-reviewed and published.",
     links: [
-      { label: "Journal of Emerging Investigators", url: "https://emerginginvestigators.org/" }
+      { label: "Journal of Emerging Investigators", url: "https://emerginginvestigators.org/articles/23-064" }
     ]
   },
   synqd: {
@@ -70,7 +72,7 @@ const POPUP_DATA = {
     logo: true,
     text: "VST/AU vocal processing plugin built in C++ with JUCE — EQ, multiband compression, sibilance reduction, and saturation in a beginner-friendly UI.",
     links: [
-      { label: "GitHub", url: "https://github.com/ayanumich" }
+      { label: "GitHub", url: "https://github.com/ayanumich/crispy" }
     ]
   },
   music: {
@@ -79,7 +81,7 @@ const POPUP_DATA = {
     logo: true,
     text: "100k+ streams and 3k+ monthly listeners self-produced under two projects, plus live performances including a 400-person show at the Blind Pig.",
     links: [
-      { label: "Spotify", url: "https://open.spotify.com/" }
+      { label: "Spotify", url: "https://open.spotify.com/artist/6BPgJxMu5S3uSpWTO5PM8W" }
     ]
   },
   yc: {
@@ -101,7 +103,7 @@ const POPUP_DATA = {
     title: "Google Student Developers @ Michigan",
     image: "images/gsd.svg",
     logo: true,
-    text: "Member of the campus developer community.",
+    text: "Member of the campus developer community - built automatic attendance monitoring and email automation system for HomeRise homeless shelter",
     links: []
   }
 };
