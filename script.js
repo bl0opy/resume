@@ -7,15 +7,19 @@ let activePanel = null;
 let hideTimer = null;
 
 function buildPanelContent(data) {
+  const posStyle = data.position ? ` style="object-position: ${data.position}"` : "";
   const imgHtml = data.image
-    ? `<img src="${data.image}" alt="${data.title}" onerror="this.parentElement.classList.add('no-image')">`
+    ? `<img src="${data.image}" alt="${data.title}"${posStyle} onerror="this.parentElement.classList.add('no-image')">`
     : "";
   const linksHtml = data.links && data.links.length
     ? `<div class="popup-links">${data.links.map(l => `<a href="${l.url}" target="_blank" rel="noopener">${l.label} ↗</a>`).join("")}</div>`
     : "";
-  const imgClass = data.logo ? "popup-image logo" : "popup-image";
+  const imgClass = data.logo
+    ? `popup-image logo${data.dark ? " dark" : ""}`
+    : data.fit ? "popup-image fit" : "popup-image";
+  const aspectStyle = data.aspect ? ` style="aspect-ratio: ${data.aspect}"` : "";
   return `
-    <div class="${imgClass}">${imgHtml}</div>
+    <div class="${imgClass}"${aspectStyle}>${imgHtml}</div>
     <h3>${data.title}</h3>
     <p>${data.text}</p>
     ${linksHtml}

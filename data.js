@@ -5,7 +5,9 @@
 const POPUP_DATA = {
   header: {
     title: "Ayan Chandrasekaran",
-    image: "images/profile.jpg",
+    image: "images/headshot.jpg",
+    position: "50% 30%",
+    aspect: "3 / 4",
     text: "CS @ Michigan, minor in Music. Building things that sit at the intersection of software, hardware, and sound.",
     links: [
       { label: "LinkedIn", url: "https://linkedin.com/in/ayanchan/" },
@@ -30,7 +32,8 @@ const POPUP_DATA = {
   },
   emanate: {
     title: "Emanate",
-    image: "images/emanate.jpg",
+    image: "images/emanate.png",
+    fit: true,
     text: "Music technology studio producing audio-reactive visuals for live concerts using DSP and computer vision — including a walkable projected piano installation.",
     links: [
       { label: "emanate.studio", url: "https://www.emanate.studio/" }
@@ -38,9 +41,11 @@ const POPUP_DATA = {
   },
   aoc: {
     title: "Art of Culture",
-    image: "images/aoc.jpg",
+    image: "images/reflections.png",
     text: "Studio internship under Grammy-winning rapper Rhymefest — songwriting, beatmaking, mixing, and community events on Chicago's South Side.",
-    links: []
+    links: [
+      { label: "Reflections", url: "https://www.youtube.com/watch?v=H0-Z6m_PnhU" }
+    ]
   },
   oxide: {
     title: "OxideMEMS",
@@ -53,7 +58,7 @@ const POPUP_DATA = {
   },
   synqd: {
     title: "synqd",
-    image: "images/synqd.jpg",
+    image: "images/synqd.png",
     text: "iOS app for long-distance couples — home/lock screen widgets showing partner timezone, location, and countdown, plus custom push notifications. Live on TestFlight.",
     links: [
       { label: "mysynqd.com", url: "https://mysynqd.com/" }
@@ -88,6 +93,7 @@ const POPUP_DATA = {
     title: "Michigan Music Business Club",
     image: "images/mmbc.webp",
     logo: true,
+    dark: true,
     text: "Director of Creative Technology — bringing tech and production tools into the club's music industry programming.",
     links: []
   },

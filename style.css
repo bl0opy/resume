@@ -194,6 +194,18 @@ h1 {
   object-fit: contain;
 }
 
+.popup-image.logo.dark {
+  background: #000000;
+}
+
+.popup-image.fit {
+  background: #000000;
+}
+
+.popup-image.fit img {
+  object-fit: contain;
+}
+
 .popup-image.no-image {
   display: flex;
   align-items: center;
