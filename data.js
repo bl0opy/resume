@@ -11,7 +11,8 @@ const POPUP_DATA = {
     text: "CS @ Michigan, minor in Music. Building things that sit at the intersection of software, hardware, and sound.",
     links: [
       { label: "LinkedIn", url: "https://linkedin.com/in/ayanchan/" },
-      { label: "GitHub", url: "https://github.com/ayanumich" }
+      { label: "GitHub (ayanumich)", url: "https://github.com/ayanumich" },
+      { label: "GitHub (bl0opy)", url: "https://github.com/bl0opy" }
     ]
   },
   umich: {
@@ -25,64 +26,51 @@ const POPUP_DATA = {
     title: "Smith+Nephew",
     image: "images/smith-nephew.svg",
     logo: true,
-    text: "Two summers building ML and audio systems for surgical robotics — from CORI Total-Knee time prediction to a real-time noise gating pipeline for the OR.",
+    text: "Two summers of ML and computer vision for surgical robotics — a ResNet-50 pressure ulcer staging app presented at the company-wide AI Conference, and CORI Total-Knee surgery time prediction across 6,500+ cases.",
     links: [
       { label: "CORI Surgical System", url: "https://www.smith-nephew.com/en-us/health-care-professionals/products/orthopaedics/cori" }
     ]
+  },
+  mmbc: {
+    title: "Michigan Music Business Club",
+    image: "images/mmbc.webp",
+    logo: true,
+    dark: true,
+    text: "Director of Creative Technology — running live visuals for a 500+ attendee conference, producing concerts and artist showcases, and building the club's web and mobile tools.",
+    links: []
+  },
+  gsd: {
+    title: "Google Student Developers @ Michigan",
+    image: "images/gsd.svg",
+    logo: true,
+    text: "Project Manager — led an 8-person team building a wellness-check and automated alert system for HomeRise, a shelter network with 18 locations across San Francisco.",
+    links: []
   },
   emanate: {
     title: "Emanate",
     image: "images/emanate.png",
     fit: true,
-    text: "Music technology studio producing audio-reactive visuals for live concerts using DSP and computer vision — including a walkable projected piano installation.",
+    text: "Music technology startup producing interactive visuals for concerts — gesture-controlled granular synthesis and projection-mapped installations, including a walkable projected piano.",
     links: [
       { label: "emanate.studio", url: "https://www.emanate.studio/" },
       { label: "Video Demo", url: "https://youtube.com/shorts/_eDrTClHqNM?feature=share" },
       { label: "Code", url: "https://github.com/bl0opy/floor-piano" }
     ]
   },
-  aoc: {
-    title: "Art of Culture",
-    image: "images/reflections.png",
-    text: "Studio internship under Grammy-winning rapper Rhymefest — songwriting, beatmaking, mixing, and community events on Chicago's South Side.",
-    links: [
-      { label: "Reflections", url: "https://www.youtube.com/watch?v=H0-Z6m_PnhU" }
-    ]
-  },
-  oxide: {
-    title: "OxideMEMS",
-    image: "images/oxidemems.svg",
-    logo: true,
-    text: "Purdue research internship testing MEMS switches and prototyping an Enhanced 911 altimeter locator system. Paper peer-reviewed and published.",
-    links: [
-      { label: "Journal of Emerging Investigators", url: "https://emerginginvestigators.org/articles/23-064" }
-    ]
-  },
   synqd: {
     title: "synqd",
     image: "images/synqd.png",
-    text: "iOS app for long-distance couples — home/lock screen widgets showing partner timezone, location, and countdown, plus custom push notifications. Live on TestFlight.",
+    text: "iOS app for long-distance couples — home/lock screen widgets showing partner timezone and location, synced in under a second on a Supabase backend. Live on TestFlight.",
     links: [
       { label: "mysynqd.com", url: "https://mysynqd.com/" }
     ]
   },
-  crispy: {
-    title: "Crispy",
-    image: "images/crispy.png",
+  soloai: {
+    title: "SOLO.AI",
+    image: "images/soloai.png",
     logo: true,
-    text: "VST/AU vocal processing plugin built in C++ with JUCE — EQ, multiband compression, sibilance reduction, and saturation in a beginner-friendly UI.",
-    links: [
-      { label: "GitHub", url: "https://github.com/ayanumich/crispy" }
-    ]
-  },
-  music: {
-    title: "Independent Music",
-    image: "images/music.svg",
-    logo: true,
-    text: "100k+ streams and 3k+ monthly listeners self-produced under two projects, plus live performances including a 400-person show at the Blind Pig.",
-    links: [
-      { label: "Spotify", url: "https://open.spotify.com/artist/6BPgJxMu5S3uSpWTO5PM8W" }
-    ]
+    text: "Privacy-first iOS chat app running a language model fully on-device — it detects PII, reformulates sensitive prompts, and escalates high-risk ones before any cloud LLM sees them.",
+    links: []
   },
   yc: {
     title: "Y Combinator Startup School",
@@ -91,19 +79,13 @@ const POPUP_DATA = {
     text: "Accepted from a pool of 30,000+ applicants.",
     links: []
   },
-  mmbc: {
-    title: "Michigan Music Business Club",
-    image: "images/mmbc.webp",
+  jei: {
+    title: "Journal of Emerging Investigators",
+    image: "images/oxidemems.svg",
     logo: true,
-    dark: true,
-    text: "Director of Creative Technology — bringing tech and production tools into the club's music industry programming.",
-    links: []
-  },
-  gsd: {
-    title: "Google Student Developers @ Michigan",
-    image: "images/gsd.svg",
-    logo: true,
-    text: "Member of the campus developer community - built automatic attendance monitoring and email automation system for HomeRise homeless shelter",
-    links: []
+    text: "Peer-reviewed paper from a Purdue OxideMEMS research internship — testing MEMS switches and prototyping an Enhanced 911 altimeter locator system.",
+    links: [
+      { label: "Read the paper", url: "https://emerginginvestigators.org/articles/23-064" }
+    ]
   }
 };
