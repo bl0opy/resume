@@ -68,7 +68,7 @@ const POPUP_DATA = {
   soloai: {
     title: "SOLO.AI",
     image: "images/soloai.png",
-    logo: true,
+    aspect: "1 / 1",
     text: "Privacy-first iOS chat app running a language model fully on-device — it detects PII, reformulates sensitive prompts, and escalates high-risk ones before any cloud LLM sees them.",
     links: []
   },
