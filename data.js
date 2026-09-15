@@ -26,18 +26,10 @@ const POPUP_DATA = {
     title: "Smith+Nephew",
     image: "images/smith-nephew.svg",
     logo: true,
-    text: "Two summers of ML and computer vision for surgical robotics — a ResNet-50 pressure ulcer staging app presented at the company-wide AI Conference, and CORI Total-Knee surgery time prediction across 6,500+ cases.",
+    text: "Two summers of ML and computer vision for surgical robotics — a full-stack ResNet-50 pressure ulcer staging app presented at the company-wide AI Conference, and CORI Total-Knee surgery time prediction across 6,500+ cases.",
     links: [
       { label: "CORI Surgical System", url: "https://www.smith-nephew.com/en-us/health-care-professionals/products/orthopaedics/cori" }
     ]
-  },
-  mmbc: {
-    title: "Michigan Music Business Club",
-    image: "images/mmbc.webp",
-    logo: true,
-    dark: true,
-    text: "Director of Creative Technology — running live visuals for a 500+ attendee conference, producing concerts and artist showcases, and building the club's web and mobile tools.",
-    links: []
   },
   gsd: {
     title: "Google Student Developers @ Michigan",
@@ -55,6 +47,15 @@ const POPUP_DATA = {
       { label: "emanate.studio", url: "https://www.emanate.studio/" },
       { label: "Video Demo", url: "https://youtube.com/shorts/_eDrTClHqNM?feature=share" },
       { label: "Code", url: "https://github.com/bl0opy/floor-piano" }
+    ]
+  },
+  piano: {
+    title: "Multiplayer Piano",
+    image: "images/multiplayer-piano.svg",
+    text: "A browser piano several people play at once. Each room is a single Cloudflare Durable Object — one authoritative actor that owns the WebSocket connections, note events, presence, and live cursors for everyone in that room, so there is no shared state to reconcile. Idle rooms hibernate out of memory and cost zero compute.",
+    links: [
+      { label: "Play it live", url: "https://bl0opy.github.io/multiplayer-piano/" },
+      { label: "Cloudflare Durable Objects docs", url: "https://developers.cloudflare.com/durable-objects/" }
     ]
   },
   synqd: {

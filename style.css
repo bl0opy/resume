@@ -121,6 +121,20 @@ h1 {
 
 .bullets li { margin-bottom: 4px; }
 
+/* Skill/coursework lines render as plain rows, matching the PDF */
+.bullets.plain {
+  list-style: none;
+  padding-left: 0;
+}
+
+.bullets.plain li { margin-bottom: 3px; }
+
+.sat {
+  font-weight: 600;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+}
+
 .pdf-link {
   text-align: center;
   margin-top: 40px;
