@@ -133,6 +133,37 @@ h1 {
 
 .pdf-link a:hover { color: var(--accent); border-color: var(--accent); }
 
+/* Footer QR code — white plate keeps dark modules on a light field,
+   which is what scanners expect, regardless of the page theme. */
+
+.site-footer {
+  margin-top: 48px;
+  text-align: center;
+}
+
+.qr-plate {
+  display: inline-flex;
+  padding: 12px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  line-height: 0;
+}
+
+.qr-plate img {
+  width: 132px;
+  height: 132px;
+  display: block;
+}
+
+.qr-caption {
+  margin: 10px 0 0;
+  font-size: 0.78rem;
+  color: var(--text-dim);
+}
+
+.site-footer .pdf-link { margin-top: 18px; }
+
 /* Side popup panels */
 
 .popup-panel {
