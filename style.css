@@ -5,6 +5,8 @@
   --text: #eaeaec;
   --text-dim: #9a9a9f;
   --accent: #7dd8c6;
+  --btn-bg: #7dd8c6;
+  --btn-fg: #0d0d0f;
   --font: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
 }
 
@@ -16,6 +18,8 @@
     --text: #17171a;
     --text-dim: #6b6b70;
     --accent: #0c8f76;
+    --btn-bg: #0a6f5c;
+    --btn-fg: #ffffff;
   }
 }
 
@@ -163,6 +167,39 @@ h1 {
 }
 
 .site-footer .pdf-link { margin-top: 18px; }
+
+/* Primary call to action — the PDF is the thing most visitors came for */
+
+.download-cta {
+  text-align: center;
+  margin: 0 0 34px;
+}
+
+.btn-download {
+  display: inline-block;
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  padding: 11px 24px;
+  border-radius: 999px;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.btn-download:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.06);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
+}
+
+.btn-download:active { transform: translateY(0); }
+
+.btn-download:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 3px;
+}
 
 /* Side popup panels */
 
