@@ -359,3 +359,202 @@ h1 {
 .italic a { color: var(--text-dim); }
 
 .bullets strong { font-weight: 600; }
+
+/* ============================================================
+   Mobile: cards over walls of text
+   Desktop is deliberately untouched — every rule below is
+   scoped to the same 900px breakpoint script.js treats as
+   mobile, so the two stay in agreement about which mode is on.
+   ============================================================ */
+
+/* Hidden on desktop; these exist to carry the mobile reading experience. */
+.hero-tagline,
+.impact,
+.entry-hook,
+.sticky-bar { display: none; }
+
+@media (max-width: 900px) {
+
+  .hero-tagline {
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.55;
+    color: var(--text-dim);
+    margin: 0 4px 22px;
+  }
+
+  .hero-tagline strong { color: var(--text); font-weight: 600; }
+
+  h1 { font-size: 1.6rem; letter-spacing: 0; }
+  .contact { font-size: 0.75rem; line-height: 1.85; }
+  header.block { margin-bottom: 20px; padding: 10px 4px; }
+
+  /* The PDF is the conversion goal — make it a full-width target. */
+  .download-cta { margin-bottom: 26px; }
+
+  .btn-download {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 0.98rem;
+  }
+
+  /* Impact tiles: the numbers do the selling before any prose does. */
+  .impact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 32px;
+  }
+
+  .stat {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 13px 12px;
+  }
+
+  .stat-num {
+    display: block;
+    font-size: 1.32rem;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+  }
+
+  .stat-label {
+    display: block;
+    margin-top: 4px;
+    font-size: 0.7rem;
+    line-height: 1.35;
+    color: var(--text-dim);
+  }
+
+  .section h2 { font-size: 0.75rem; margin-bottom: 12px; }
+
+  /* Each entry becomes a tappable card. */
+  .entry {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 14px 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .entry:hover, .entry.mobile-open { transform: none; }
+  .entry.mobile-open { border-color: var(--accent); }
+
+  /* Stack the title/location rows — side-by-side squeezes both at phone width. */
+  .entry-row { flex-direction: column; gap: 2px; }
+  .entry-title { font-size: 0.97rem; line-height: 1.35; }
+  .entry-loc, .italic { font-size: 0.78rem; }
+  .italic.sub { margin-top: 8px; }
+
+  /* The raw URL is noise in a headline; the popup carries the real link. */
+  .title-url, .title-tags { display: none; }
+
+  .tag-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin: 9px 0 0;
+  }
+
+  .tag-chips span {
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--text-dim);
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 3px 9px;
+  }
+
+  .entry-hook {
+    display: block;
+    margin: 9px 0 0;
+    font-size: 0.85rem;
+    line-height: 1.45;
+    color: var(--text);
+  }
+
+  /* The collapse itself: detail is present in the DOM, just not shouted. */
+  .entry .bullets,
+  .entry .italic.sub { display: none; }
+
+  .entry.mobile-open .bullets { display: block; }
+  .entry.mobile-open .italic.sub { display: flex; }
+
+  .entry .bullets { font-size: 0.83rem; margin-top: 10px; }
+
+  /* Affordance so the card reads as openable rather than just styled. */
+  .entry[data-popup]::after {
+    content: "Details ↓";
+    display: block;
+    margin-top: 10px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .entry[data-popup].mobile-open::after { content: "Close ↑"; }
+
+  .mobile-popup {
+    border-radius: 12px;
+    margin: -4px 0 12px;
+  }
+
+  /* Persistent path to the PDF once the hero scrolls away. */
+  .sticky-bar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 16px calc(10px + env(safe-area-inset-top));
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    transform: translateY(-100%);
+    transition: transform 0.22s ease;
+  }
+
+  .sticky-bar.visible { transform: translateY(0); }
+
+  .sticky-name {
+    font-size: 0.86rem;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .sticky-dl {
+    flex: none;
+    background: var(--btn-bg);
+    color: var(--btn-fg);
+    font-size: 0.79rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 999px;
+  }
+}
+
+@media (max-width: 360px) {
+  .impact { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sticky-bar { transition: none; }
+}

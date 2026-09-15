@@ -8,6 +8,11 @@
 </head>
 <body>
 
+<div class="sticky-bar" id="stickyBar">
+  <span class="sticky-name">Ayan Chandrasekaran</span>
+  <a class="sticky-dl" href="Ayan Chandrasekaran Resume (Aug 2026).pdf" download>Resume ↓</a>
+</div>
+
 <div class="page-wrap">
 
   <aside class="popup-panel left" id="popupLeft"></aside>
@@ -25,11 +30,23 @@
       </p>
     </header>
 
+    <p class="hero-tagline">CS @ Michigan, minor in Music. Building at the intersection of
+      <strong>software</strong>, <strong>hardware</strong>, and <strong>sound</strong>.</p>
+
     <p class="download-cta">
       <a class="btn-download" href="Ayan Chandrasekaran Resume (Aug 2026).pdf" download>
         Download Resume (PDF) <span aria-hidden="true">↓</span>
       </a>
     </p>
+
+    <section class="impact" aria-label="Highlights">
+      <div class="stat"><span class="stat-num">74%</span><span class="stat-label">staging accuracy, vs 67% clinician baseline</span></div>
+      <div class="stat"><span class="stat-num">6,500+</span><span class="stat-label">surgical cases analyzed</span></div>
+      <div class="stat"><span class="stat-num">~2.7s</span><span class="stat-label">on-device LLM first response, down from ~20s</span></div>
+      <div class="stat"><span class="stat-num">&lt;1s</span><span class="stat-label">cross-device partner sync</span></div>
+      <div class="stat"><span class="stat-num">18</span><span class="stat-label">shelter sites served by one alert pipeline</span></div>
+      <div class="stat"><span class="stat-num">30k+</span><span class="stat-label">applicant pool for YC Startup School</span></div>
+    </section>
 
     <section class="section">
       <h2>Education</h2>
@@ -42,6 +59,7 @@
           <span>B.S. Computer Science (College of Engineering), Minor in Music</span>
           <span>Expected Graduation May 2028</span>
         </div>
+        <p class="entry-hook">Python, C/C++, Swift, TypeScript, PyTorch — plus ML, vision, OS, and security coursework</p>
         <ul class="bullets plain">
           <li><strong>Languages:</strong> Python, C/C++, Java, TypeScript/JavaScript, Swift, C# (Unity), SQL, HTML/CSS</li>
           <li><strong>Testing &amp; Tooling:</strong> Automated testing (Playwright, XCTest), unit/integration test suites, Git, code review, Agile/Scrum, debugging</li>
@@ -65,6 +83,7 @@
         <div class="entry-row italic sub">
           <span>Summer 2026 - Presented at company-wide AI Conference</span><span>May 2026 – August 2026</span>
         </div>
+        <p class="entry-hook">Clinician-level pressure-ulcer staging from a single photo, shipped over two summers</p>
         <ul class="bullets">
           <li>Built a full-stack <strong>Python/PyTorch</strong> CNN/VLM classification app for Pressure Ulcer staging, diagnosis, and product recommendation. Wrote HTML/CSS/JS frontend, migrated Flask backend to FastAPI</li>
           <li>Redesigned inference to run models concurrently rather than sequentially, cutting full-diagnosis time from minutes to <strong>3–5s</strong> with the first result instant; verified with <strong>Playwright</strong> tests covering GUI and concurrent API behavior</li>
@@ -89,6 +108,7 @@
           <span>Project Manager, building software solutions for charity organizations</span>
           <span>October 2025 – Present</span>
         </div>
+        <p class="entry-hook">Automated wellness checks keeping an 18-site shelter network accountable</p>
         <ul class="bullets">
           <li>Led wellness-check system for HomeRise, a shelter network with <strong>18 locations across San Francisco</strong>, by building an <strong>automated alert pipeline</strong> in Python that notifies staff when a resident hasn't checked in within 72 hours</li>
           <li>Designed the check-in form UI/UX and submission pipeline (HTML/CSS/JS, form validation, backend intake) feeding the alert system, <strong>coordinating with an 8-person team</strong> to ship the feature into production</li>
@@ -97,13 +117,14 @@
 
       <div class="entry" data-popup="emanate">
         <div class="entry-row">
-          <span class="entry-title">Emanate, Startup (<a href="https://www.emanate.studio/" target="_blank" rel="noopener">https://www.emanate.studio/</a>)</span>
+          <span class="entry-title">Emanate, Startup<span class="title-url"> (<a href="https://www.emanate.studio/" target="_blank" rel="noopener">https://www.emanate.studio/</a>)</span></span>
           <span class="entry-loc">Ann Arbor, MI</span>
         </div>
         <div class="entry-row italic">
           <span>Founder, producing interactive visuals for concerts and events on campus</span>
           <span>August 2025 – Present</span>
         </div>
+        <p class="entry-hook">Granular synthesis driven by hand gestures, and a projected piano you can play</p>
         <ul class="bullets">
           <li>Developed C++/Python software enabling musicians to generate audio with <strong>granular synthesis</strong> using <a href="https://youtube.com/shorts/_eDrTClHqNM?feature=share" target="_blank" rel="noopener">hand gestures</a></li>
           <li>Implemented a <a href="https://github.com/bl0opy/floor-piano" target="_blank" rel="noopener">projection mapping</a> system for musical installations on campus, including a <strong>playable <a href="https://github.com/bl0opy/floor-piano" target="_blank" rel="noopener">projected piano</a></strong></li>
@@ -116,13 +137,14 @@
 
       <div class="entry" data-popup="piano">
         <div class="entry-row">
-          <span class="entry-title">Multiplayer Piano (<a href="https://bl0opy.github.io/multiplayer-piano/" target="_blank" rel="noopener">https://bl0opy.github.io/multiplayer-piano/</a>) [TypeScript, WebSockets, Distributed Systems]</span>
+          <span class="entry-title">Multiplayer Piano<span class="title-url"> (<a href="https://bl0opy.github.io/multiplayer-piano/" target="_blank" rel="noopener">https://bl0opy.github.io/multiplayer-piano/</a>)</span><span class="title-tags"> [TypeScript, WebSockets, Distributed Systems]</span></span>
           <span class="entry-loc">Remote</span>
         </div>
         <div class="entry-row italic">
           <span>Real-time collaborative web instrument on a serverless edge runtime</span>
           <span>May 2026 – Present</span>
         </div>
+        <p class="entry-hook">One Cloudflare Durable Object per room — a browser piano played together, live</p>
         <ul class="bullets">
           <li>Built a browser piano <strong>multiple people play together</strong> in real time over <strong>WebSockets</strong>, with one <strong>Cloudflare Durable Object</strong> per room acting as the server for note events, presence, and live cursors</li>
           <li>Wrote an <strong>automated test suite</strong> in <strong>Playwright</strong> driving two real browser contexts into a single room to <strong>verify multi-client sync</strong>; built the client in vanilla <strong>TypeScript</strong> (Web Audio sampler with per-player voice isolation, cursor sync)</li>
@@ -132,13 +154,14 @@
 
       <div class="entry" data-popup="synqd">
         <div class="entry-row">
-          <span class="entry-title">synqd, iOS App (<a href="https://mysynqd.com/" target="_blank" rel="noopener">https://mysynqd.com/</a>) [Full-Stack, Swift, SQL, Version Control]</span>
+          <span class="entry-title">synqd, iOS App<span class="title-url"> (<a href="https://mysynqd.com/" target="_blank" rel="noopener">https://mysynqd.com/</a>)</span><span class="title-tags"> [Full-Stack, Swift, SQL, Version Control]</span></span>
           <span class="entry-loc">Remote</span>
         </div>
         <div class="entry-row italic">
           <span>Founder, notification-based long-distance couples app to see current timezone and send custom messages</span>
           <span>May 2026 – Present</span>
         </div>
+        <p class="entry-hook">Widgets that keep long-distance partners in sync in under a second</p>
         <ul class="bullets">
           <li>Built iOS app on Supabase backend, keeping home/lock screen widgets in sync with a partner's <strong>live timezone/location</strong></li>
           <li>Engineered <strong>real-time sync backend</strong> (Postgres, edge functions, APN) that pushes partner location updates in <strong>under 1 second</strong></li>
@@ -148,13 +171,14 @@
 
       <div class="entry" data-popup="soloai">
         <div class="entry-row">
-          <span class="entry-title">SOLO.AI, iOS App [Swift, Python, On-Device ML, Local AI/Agent]</span>
+          <span class="entry-title">SOLO.AI, iOS App<span class="title-tags"> [Swift, Python, On-Device ML, Local AI/Agent]</span></span>
           <span class="entry-loc">Remote</span>
         </div>
         <div class="entry-row italic">
           <span>Founder, privacy-first iOS chat app that scrubs personal data on-device before any cloud LLM sees it</span>
           <span>April 2026 – Present</span>
         </div>
+        <p class="entry-hook">Local model runs first — ~2.7s to first response, 89 automated privacy tests</p>
         <ul class="bullets">
           <li>Architected <strong>hybrid inference pipeline</strong> running a local language model fully on-device via a custom Swift package, <strong>cutting response start time from ~20s to ~2.7s</strong></li>
           <li>Designed a <strong>three-tier data-protection system</strong> where the on-device model detects Personally Identifiable Information (PII), <strong>reformulates sensitive prompts</strong> to minimum necessary context, and <strong>escalates high-risk</strong> ones to user review</li>
@@ -175,6 +199,7 @@
           <span>Accepted from 30,000+ applicants</span>
           <span>August 2026</span>
         </div>
+        <p class="entry-hook">Accepted from a pool of 30,000+ applicants</p>
       </div>
 
       <div class="entry" data-popup="jei">
@@ -192,6 +217,7 @@
     <footer class="site-footer">
       <div class="qr-plate">
         <img src="images/resume-qr.svg" alt="QR code linking to bl0opy.github.io/resume">
+        <p class="entry-hook">Peer-reviewed MEMS pressure-sensor research, published</p>
       </div>
       <p class="qr-caption">Scan to open this resume — bl0opy.github.io/resume</p>
       <p class="pdf-link">

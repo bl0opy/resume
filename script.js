@@ -61,6 +61,7 @@ function hidePopup() {
 entries.forEach((entry, index) => {
   if (isMobile()) {
     entry.addEventListener("click", (e) => {
+      if (e.target.closest("a")) return;   // let links inside an open card navigate
       e.stopPropagation();
       const wasOpen = entry.classList.contains("mobile-open");
       document.querySelectorAll(".entry.mobile-open").forEach(el => el.classList.remove("mobile-open"));
@@ -86,3 +87,45 @@ entries.forEach((entry, index) => {
   panel.addEventListener("mouseenter", () => clearTimeout(hideTimer));
   panel.addEventListener("mouseleave", hidePopup);
 });
+
+/* Sticky download bar: appears once the main call to action scrolls away,
+   so the PDF is never more than one tap out. Styling confines it to mobile. */
+
+const stickyBar = document.getElementById("stickyBar");
+const cta = document.querySelector(".download-cta");
+
+if (stickyBar && cta) {
+  let ticking = false;
+
+  const sync = () => {
+    const threshold = cta.offsetTop + cta.offsetHeight;
+    stickyBar.classList.toggle("visible", window.scrollY > threshold);
+    ticking = false;
+  };
+
+  window.addEventListener("scroll", () => {
+    if (!ticking) {
+      ticking = true;
+      window.requestAnimationFrame(sync);
+    }
+  }, { passive: true });
+
+  sync();
+}
+
+/* On mobile, rebuild the bracketed tech list in each project title as chips.
+   The markup keeps one source of truth — desktop still renders it inline. */
+
+if (isMobile()) {
+  document.querySelectorAll(".title-tags").forEach(tagSpan => {
+    const tags = tagSpan.textContent.replace(/[\[\]]/g, "").split(",")
+      .map(t => t.trim()).filter(Boolean);
+    if (!tags.length) return;
+
+    const row = tagSpan.closest(".entry-row");
+    const chips = document.createElement("p");
+    chips.className = "tag-chips";
+    chips.innerHTML = tags.map(t => `<span>${t}</span>`).join("");
+    row.after(chips);
+  });
+}
