@@ -161,6 +161,8 @@ h1 {
 
 .qr-plate {
   display: inline-flex;
+  flex: none;
+  width: max-content;
   padding: 12px;
   background: #ffffff;
   border: 1px solid var(--border);
